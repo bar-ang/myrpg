@@ -8,12 +8,15 @@ import java.util.*;
 public class GameCharacter{
     public Stats stats;
     public String name;
-    public int level;
 
-    public GameCharacter(String name, int level){
+    public GameCharacter(GameCharacter character){
+        this.stats = character.stats;
+        this.name = character.name;
+    }
+
+    public GameCharacter(String name){
         this.name = name;
-        this.level = level;
-        this.stats = new Stats();
+        this.stats = Stats.defaultStats();
     }
     //List<Skill> skills;
 }

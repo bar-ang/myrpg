@@ -7,8 +7,8 @@ import java.util.*;
  */
 public class Player extends Entity{
 
-    public Player(){
-        super();
+    public Player(GameCharacter character, int level){
+        super(character, level);
     }
 
     public int attack(Entity entity){
